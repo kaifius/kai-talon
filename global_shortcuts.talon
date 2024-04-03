@@ -1,0 +1,7 @@
+find it: key(cmd-f)
+save it: key(cmd-s)
+app search: key(cmd-t)
+homerow: key(cmd-shift-space)
+spotlight: key(cmd-space)
+oh: key(0)
+app quit: key(cmd-q)
