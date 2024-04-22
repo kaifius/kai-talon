@@ -12,3 +12,5 @@ line copy down: user.vscode("editor.action.copyLinesDownAction")
 line copy up: user.vscode("editor.action.copyLinesUpAction")
 line move down: user.vscode("editor.action.moveLinesDownAction")
 line move up: user.vscode("editor.action.moveLinesUpAction")
+
+# todo terminal pane shrink and expand
