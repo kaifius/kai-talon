@@ -2,12 +2,17 @@ find it: key(cmd-f)
 save it: key(cmd-s)
 close it: key(cmd-w)
 quit it: key(cmd-q)
+search it: key(cmd-t)
+focus last: key(cmd-tab)
 
 copy it: key(cmd-c)
 cut it: key(cmd-x)
 paste it: key(cmd-v)
 undo it: key(cmd-z)
 redo it: key(cmd-y)
+chuck it:
+  key(ctrl-a)
+  key(ctrl-k)
 
 rightest: key(cmd-right)
 leftest: key(cmd-left)
@@ -16,9 +21,6 @@ uppest: key(cmd-up)
 
 tab next: key(cmd-shift-])
 tab last: key(cmd-shift-[)
-
-app search: key(cmd-t)
-app quit: key(cmd-q)
 
 row search: key(cmd-alt-l)
 row: key(cmd-shift-space)
