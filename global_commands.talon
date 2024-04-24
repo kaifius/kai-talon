@@ -28,3 +28,7 @@ row: key(cmd-shift-space)
 spotlight: key(cmd-space)
 oh: key(0)
 emoji: key(cmd-ctrl-space)
+
+# command line
+quit proc: key(ctrl-c)
+(exit | leave) proc: key(ctrl-d)
