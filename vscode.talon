@@ -28,6 +28,9 @@ term min: user.vscode("workbench.action.toggleMaximizedPanel")
 switch hats: user.vscode("cursorless.toggleDecorations")
 cursorless hats: user.vscode("cursorless.toggleDecorations")
 
+# misc commands
+copy path: user.vscode("copyRelativeFilePath")
+
 # git commands
 git status:
   user.vscode("workbench.action.terminal.focus")
@@ -40,10 +43,6 @@ git diff:
 git diff (staged | stage):
   user.vscode("workbench.action.terminal.focus")
   insert("git icdiff --staged")
-
-# git add dot:
-#   user.vscode("workbench.action.terminal.focus")
-#   insert("git add .")
 
 git add [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
@@ -85,13 +84,20 @@ git push force:
   user.vscode("workbench.action.terminal.focus")
   insert("git push -f")
 
-git log:
+git log [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
-  insert("git lg")
+  insert("git lg ")
+  insert(user.text or "")
 
-git reset:
+git reset [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
-  insert("git reset")
+  insert("git reset ")
+  insert(user.text or "")
+
+git reset hard [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git reset --hard ")
+  insert(user.text or "")
 
 git co [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
@@ -102,14 +108,9 @@ git co main:
   user.vscode("workbench.action.terminal.focus")
   insert("git checkout main && git pull origin main --prune && git fetch")
 
-git co new [<user.text>]:
+git (co | branch) new [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git checkout -b ")
-  insert(user.text or "")
-
-git branch [<user.text>]:
-  user.vscode("workbench.action.terminal.focus")
-  insert("git branch ")
   insert(user.text or "")
 
 git branch:
@@ -130,3 +131,26 @@ git branch force delete [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git branch -D ")
   insert(user.text or "")
+
+git rebase [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git rebase ")
+  insert(user.text or "")
+
+git stash:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git stash")
+
+git stash save [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git stash save \"\"")
+  key(left)
+  insert(user.text or "")
+
+git stash pop:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git stash pop")
+
+git stash list:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git stash list")
