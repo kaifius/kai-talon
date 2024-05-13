@@ -4,10 +4,12 @@ close it: key(cmd-w)
 quit it: key(cmd-q)
 search it: key(cmd-t)
 focus last: key(cmd-tab)
+new it: key(cmd-n)
 
 copy it: key(cmd-c)
 cut it: key(cmd-x)
 paste it: key(cmd-v)
+paste in place: key(cmd-alt-shift-v)
 undo it: key(cmd-z)
 redo it: key(cmd-y)
 chuck it:
@@ -22,11 +24,13 @@ uppest: key(cmd-up)
 tab next: key(cmd-shift-])
 tab last: key(cmd-shift-[)
 
-row search: key(cmd-alt-l)
+row search [<user.text>]:
+  key(cmd-alt-l)
+  sleep(200ms)
+  insert(user.text or "")
 row: key(cmd-shift-space)
 
 spotlight: key(cmd-space)
-oh: key(0)
 emoji: key(cmd-ctrl-space)
 
 # command line

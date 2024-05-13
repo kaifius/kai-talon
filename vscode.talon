@@ -17,12 +17,27 @@ line copy up: user.vscode("editor.action.copyLinesUpAction")
 line move down: user.vscode("editor.action.moveLinesDownAction")
 line move up: user.vscode("editor.action.moveLinesUpAction")
 line comment: user.vscode("editor.action.commentLine")
+comment it: user.vscode("editor.action.commentLine")
+# TODO
+# line indent: user.vscode("")
+# line dedent: user.vscode("")
+# indent: user.vscode("")
+# dedent: user.vscode("")
 
 # terminal commands
 term bigger: user.vscode("workbench.action.terminal.resizePaneUp")
 term smaller: user.vscode("workbench.action.terminal.resizePaneDown")
 term max: user.vscode("workbench.action.toggleMaximizedPanel")
 term min: user.vscode("workbench.action.toggleMaximizedPanel")
+
+# TODO
+# term hide: user.vscode("")
+# commit temp:
+#   user.vscode("workbench.acition.terminal.focus")
+#   insert("tempcommit")
+# reset (temp | tem | ten) commit:
+#   user.vscode("workbench.acition.terminal.focus")
+#   insert("resetTempCommit")
 
 # cursorless commands
 switch hats: user.vscode("cursorless.toggleDecorations")
