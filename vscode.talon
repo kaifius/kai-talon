@@ -2,13 +2,21 @@ app: vscode
 -
 
 # window navigation
-focus right: user.vscode("workbench.action.focusRightGroup")
-focus left: user.vscode("workbench.action.focusLeftGroup")
-move right: user.vscode("workbench.action.moveEditorToNextGroup")
-move left: user.vscode("workbench.action.moveEditorToPreviousGroup")
-edit: user.vscode("workbench.action.focusActiveEditorGroup")
+[pane] focus right: user.vscode("workbench.action.focusRightGroup")
+[pane] focus left: user.vscode("workbench.action.focusLeftGroup")
+[pane] move right: user.vscode("workbench.action.moveEditorToNextGroup")
+[pane] move left: user.vscode("workbench.action.moveEditorToPreviousGroup")
+[pane] edit: user.vscode("workbench.action.focusActiveEditorGroup")
+pane split [right]: user.vscode("workbench.action.splitEditor")
+pane split left: user.vscode("workbench.action.splitEditorLeft")
+pane split up: user.vscode("workbench.action.splitEditorUp")
+pane split down: user.vscode("workbench.action.splitEditorDown")
 (term | term it): user.vscode("workbench.action.terminal.focus")
 close it all: user.vscode("workbench.action.closeAllEditors")
+# use keyboard shortcuts to get context-specific use
+# (i.e. make it work in the terminal)
+tab next: key(cmd-shift-])
+tab last: key(cmd-shift-[)
 
 # line commands
 line select: user.vscode("expandLineSelection")
@@ -45,6 +53,10 @@ cursorless hats: user.vscode("cursorless.toggleDecorations")
 
 # misc commands
 copy path: user.vscode("copyRelativeFilePath")
+toggle wrap: user.vscode("editor.action.toggleWordWrap")
+grep it [<user.text>]:
+  user.vscode("workbench.action.findInFiles")
+  insert(user.text)
 
 # git commands
 git status:
@@ -102,31 +114,53 @@ git push force:
 git log [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git lg ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git reset [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git reset ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git reset hard [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git reset --hard ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
-git co [<user.text>]:
+git (co | checkout) [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git checkout ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
-git co main:
+git (co | checkout) kai [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git checkout kai/")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+git pull:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git pull ")
+
+git fetch:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git fetch ")
+
+get latest:
   user.vscode("workbench.action.terminal.focus")
   insert("git checkout main && git pull origin main --prune && git fetch")
+
+git (co | checkout) last:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git checkout -")
 
 git (co | branch) new [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git checkout -b ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+git (co | branch) new kai [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git checkout -b kai/")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git branch:
   user.vscode("workbench.action.terminal.focus")
@@ -135,22 +169,26 @@ git branch:
 git branch move [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git branch -m ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git branch delete [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git branch -d ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git branch force delete [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git branch -D ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
 
 git rebase [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git rebase ")
-  insert(user.text or "")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+git rebase last:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git rebase -")
 
 git stash:
   user.vscode("workbench.action.terminal.focus")
@@ -169,3 +207,49 @@ git stash pop:
 git stash list:
   user.vscode("workbench.action.terminal.focus")
   insert("git stash list")
+
+# TODO don't use my aliases for these?
+temp commit:
+  user.vscode("workbench.action.terminal.focus")
+  insert("tempcommit")
+
+reset temp commit:
+  user.vscode("workbench.action.terminal.focus")
+  insert("resetTempCommit")
+
+open changed files:
+  user.vscode("workbench.action.terminal.focus")
+  insert("openChangedFiles")
+
+# rails commands
+bundle [install]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("bundle install")
+
+# binti commands
+(be command|binti) [<user.text>] [args]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("b ")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+  insert(" ")
+
+snapshot load [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("b db-load-snapshot ")
+  insert(user.text)
+
+snapshot load pre prod:
+  user.vscode("workbench.action.terminal.focus")
+  insert("b db-load-snapshot pre-prod")
+
+start server:
+  user.vscode("workbench.action.terminal.focus")
+  insert("b rails-server")
+
+over mind start:
+  user.vscode("workbench.action.terminal.focus")
+  insert("overmind start")
+
+over mind stop:
+  user.vscode("workbench.action.terminal.focus")
+  insert("overmind stop")
