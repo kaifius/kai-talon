@@ -12,3 +12,7 @@ tab last: key(alt-up)
 mention [<user.text>]:
   key("@")
   insert(user.text)
+
+emote [<user.text>]:
+  key(":")
+  user.insert_formatted(user.text, "NO_SPACES")
