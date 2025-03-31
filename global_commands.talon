@@ -23,13 +23,24 @@ redo it: key(cmd-y)
 chuck it:
   key(ctrl-a)
   key(ctrl-k)
+chuck line:
+  key(cmd-right)
+  key(cmd-backspace)
+  key(backspace)
 chuck leftest: key(cmd-backspace)
 chuck rightest: key(ctrl-k)
 chomp it: key(alt-backspace)
 gobble it: key(alt-delete)
 
-start recording: key(cmd-shift-5)
-stop recording: key(f9)
+record screen: key(cmd-shift-5)
+[show] app windows:
+  key(esc)
+  sleep(250ms)
+  key(ctrl-down)
+[show] all windows:
+  key(esc)
+  sleep(250ms)
+  key(ctrl-up)
 
 rightest: key(cmd-right)
 leftest: key(cmd-left)

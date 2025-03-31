@@ -7,8 +7,8 @@ please [<user.text>]:
   sleep(100ms)
   insert(user.text)
 [open] preferences: key(cmd-,)
-go back: key(cmd-[)
-go forward: key(cmd-])
+go back: key(cmd-alt-left)
+go forward: key(cmd-alt-right)
 # go to line number
 go [<user.number_string>]:
   key(ctrl-g)
