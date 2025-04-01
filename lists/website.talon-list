@@ -1,0 +1,37 @@
+list: user.website
+os: mac
+-
+talon home page: http://talonvoice.com
+talon slack: http://talonvoice.slack.com/messages/help
+talon wiki: https://talon.wiki/
+talon cheatsheet: https://tararoys.github.io/small_cheatsheet
+talon practice: https://chaosparrot.github.io/talon_practice/
+talon repo search: https://search.talonvoice.com/search/
+dropbox: https://dropbox.com/
+google: https://www.google.com/
+calendar: https://calendar.google.com
+calendar two: https://calendar.google.com/calendar/u/1/r
+maps: https://maps.google.com/
+gmail: https://mail.google.com/
+gmail two: https://mail.google.com/mail/u/1/#inbox
+github: https://github.com/
+gist: https://gist.github.com/
+wikipedia: https://en.wikipedia.org/
+youtube: https://www.youtube.com/
+gusto: https://app.gusto.com/login
+guru: https://app.getguru.com/dashboard
+wiki search: https://github.com/search?q=repo%3Abinti-family%2Ffamily&type=Wikis
+family PRs: https://github.com/binti-family/family/pulls
+my PRs: https://github.com/pulls/
+PR review: https://github.com/pulls/review-requested
+jira: https://binti.atlassian.net/jira/software/c/projects/ENG/boards/94
+shrine epics: https://binti.atlassian.net/issues/?filter=10380
+local host: http://localhost:3000/
+graphical: http://localhost:3000/graphiql
+storybook: http://localhost:6006/
+dev: http://dev.binti.support/
+vocal warmup one: https://www.youtube.com/watch?v=0LHsQ0K71Hw
+vocal warmup two: https://youtu.be/VF_9e08PdZU?si=NImLbYJBBPNv4xqZ&t=61
+ChatGPT: https://chatgpt.com/
+expensify: https://www.expensify.com/inbox
+metabase: https://metabase-internal.binti.com/auth/login

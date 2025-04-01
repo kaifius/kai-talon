@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: Kais-MacBook-Pro-2
+os: mac
+-
+user: /Users/kai
+profile: /Users/kai
+desktop: /Users/kai/Desktop
+desk: /Users/kai/Desktop
+documents: /Users/kai/Documents
+docks: /Users/kai/Documents
+downloads: /Users/kai/Downloads
+music: /Users/kai/Music
+pictures: /Users/kai/Pictures
+videos: /Users/kai/Videos
+talon home: /Users/kai/.talon
+talon user: /Users/kai/.talon/user
