@@ -16,3 +16,8 @@ mention [<user.text>]:
 emote [<user.text>]:
   key(":")
   user.insert_formatted(user.text, "NO_SPACES")
+
+channel <user.text>:
+  user.messaging_open_channel_picker()
+  sleep(200ms)
+  insert(user.formatted_text(user.text, "ALL_LOWERCASE"))

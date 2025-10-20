@@ -27,6 +27,7 @@ PR review: https://github.com/pulls/review-requested
 jira: https://binti.atlassian.net/jira/software/c/projects/ENG/boards/94
 shrine epics: https://binti.atlassian.net/issues/?filter=10380
 local host: http://localhost:3000/
+PR canary: http://pr-canary.dev.binti.support/
 graphical: http://localhost:3000/graphiql
 storybook: http://localhost:6006/
 dev: http://dev.binti.support/

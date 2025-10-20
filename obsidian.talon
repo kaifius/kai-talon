@@ -3,7 +3,7 @@ app: obsidian
 -
 #=========================== navigation / view ==============================#
 please [<user.text>]:
-  key(cmd-p)
+  key(cmd-shift-k)
   sleep(100ms)
   insert(user.text)
 [open] preferences: key(cmd-,)
@@ -87,7 +87,7 @@ strike to do:
 indent: key(cmd-])
 
 # self-defined hotkeys via Hotkeys++
-chuck line: key(cmd-shift-k)
+chuck line: key(ctrl-k)
 [line] copy down: key(alt-shift-down)
 [line] copy up: key(alt-shift-up)
 [line] move up: key(alt-up)

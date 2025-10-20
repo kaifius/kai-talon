@@ -10,6 +10,8 @@ focus last: key(cmd-tab)
 new it: key(cmd-n)
 open settings: key(cmd-,)
 
+speak this: key(alt-esc)
+
 bold it: key(cmd-b)
 italicize it: key(cmd-i)
 underline it: key(cmd-u)

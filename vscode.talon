@@ -323,7 +323,11 @@ snapshot load pre prod:
 
 start server:
   user.vscode("workbench.action.terminal.focus")
-  insert("b rails-server")
+  insert("rails server")
+
+open console:
+  user.vscode("workbench.action.terminal.focus")
+  insert("rails console")
 
 over mind start:
   user.vscode("workbench.action.terminal.focus")
@@ -336,3 +340,23 @@ over mind start no web:
 over mind stop:
   user.vscode("workbench.action.terminal.focus")
   insert("overmind stop")
+
+go new [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("go new ")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+go branch [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("go ")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+branches with [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("branchesWith ")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
+[force] delete branches with [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("forceDeleteBranchesWith ")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
