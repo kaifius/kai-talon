@@ -102,18 +102,20 @@ trim this: key(alt-shift-t)
 # self-defined hotkeys via Code Editor Shortcuts
 cursify: key(alt-shift-i)
 
-#=========================== tab management ===========================#
+#=========================== tab & window management ===========================#
 # self-defined hotkeys
 [tab] focus right: key(cmd-alt-shift-right)
 [tab] focus left: key(cmd-alt-shift-left)
 [tab] focus up: key(cmd-alt-shift-up)
-[tab] focus down: key(cmd-alt-shift-down)
+[tab] focus down: key(cmd-alt-shift-r)
 
 # self-defined hotkeys via tab-shifter
 [tab] move right: key(cmd-ctrl-])
 [tab] move left: key(cmd-ctrl-[)
 
 tab new: key(cmd-t)
+
+pop out: key(cmd-alt-`)
 
 #============================= day planner ============================#
 planner tag [<user.text>]:

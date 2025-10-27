@@ -10,8 +10,11 @@ focus last: key(cmd-tab)
 new it: key(cmd-n)
 open settings: key(cmd-,)
 
+# accessibility
 speak this: key(alt-esc)
+tee sleep: speech.disable()
 
+# text formatting
 bold it: key(cmd-b)
 italicize it: key(cmd-i)
 underline it: key(cmd-u)
