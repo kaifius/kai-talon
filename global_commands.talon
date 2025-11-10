@@ -10,6 +10,18 @@ focus last: key(cmd-tab)
 new it: key(cmd-n)
 open settings: key(cmd-,)
 
+# window management
+better snap full: key(cmd-alt-ctrl-up)
+better snap next: key(cmd-alt-ctrl-i)
+better snap left: key(alt-ctrl-left)
+better snap right: key(alt-ctrl-right)
+[better] snap top: key(alt-ctrl-up)
+[better] snap bottom: key(alt-ctrl-down)
+[better] snap upper left: key(alt-ctrl-y)
+[better] snap upper right: key(alt-ctrl-o)
+[better] snap lower left: key(alt-ctrl-n)
+[better] snap lower right: key(alt-ctrl-.)
+
 # accessibility
 speak this: key(alt-esc)
 tee sleep: speech.disable()
