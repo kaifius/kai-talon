@@ -260,6 +260,10 @@ open changed files:
   user.vscode("workbench.action.terminal.focus")
   insert("openChangedFiles")
 
+copy branch name:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git branch --show-current | pbcopy")
+
 # gh cli commands
 open PR:
   user.vscode("workbench.action.terminal.focus")

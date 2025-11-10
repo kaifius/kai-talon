@@ -110,6 +110,8 @@ cursify: key(alt-shift-i)
 [tab] move right: key(cmd-ctrl-])
 [tab] move left: key(cmd-ctrl-[)
 
+split right: key(cmd-alt-r)
+
 tab new: key(cmd-t)
 
 pop out: key(cmd-alt-`)

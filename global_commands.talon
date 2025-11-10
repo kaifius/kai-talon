@@ -60,6 +60,7 @@ record screen: key(cmd-shift-5)
   sleep(250ms)
   key(ctrl-up)
 
+# text selection and navigation
 rightest: key(cmd-right)
 leftest: key(cmd-left)
 downest: key(cmd-down)
@@ -118,7 +119,6 @@ PR link [<user.number_string>]:
   insert("[PR #{user.number_string}](https://github.com/binti-family/family/pull/{user.number_string}) ")
 PR path [<user.number_string>]:
   insert("https://github.com/binti-family/family/pull/{user.number_string} ")
-insert work email: insert("kai@binti.com")
 
 # experimental
 # insert time [<user.number_string>] [<user.digit_string>]:
