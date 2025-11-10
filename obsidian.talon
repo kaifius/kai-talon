@@ -51,11 +51,11 @@ migrate to do:
   key(cmd-shift-left)
   key(cmd-c)
 
-  # change checkbox to ">"
+  # change checkbox to "[>]"
   key(left)
-  key(alt-backspace)
-  key(alt-backspace)
-  insert("> ")
+  key(alt-left)
+  key(backspace)
+  insert(">")
 
 # TODO do a proper integration; this only works on one line, unchecked todos
 partial check to do:
@@ -71,16 +71,13 @@ partial check to do:
   insert("/ ")
 
 # TODO do a proper integration; this only works on one line, unchecked todos
-strike to do:
-  # strike through line
-  key(cmd-right)
-  key(cmd-shift-left)
-  key(cmd-shift-x)
-
-  # delete checkbox
+strike [through] to do:
+  # change checkbox to "[-]"
   key(cmd-left)
-  key(alt-backspace)
-  key(alt-backspace)
+  key(left)
+  key(alt-left)
+  key(backspace)
+  insert("-")
 
 #=========================== text editing =============================#
 (dedent|didn't|detent): key(cmd-[)
