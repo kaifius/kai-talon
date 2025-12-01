@@ -139,6 +139,10 @@ git log [<user.text>]:
   insert("git lg ")
   user.insert_formatted(user.text, "DASH_SEPARATED")
 
+[git] log origin:
+  user.vscode("workbench.action.terminal.focus")
+  insert("lgOrigin")
+
 git reset [<user.text>]:
   user.vscode("workbench.action.terminal.focus")
   insert("git reset ")

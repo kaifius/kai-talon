@@ -25,7 +25,8 @@ better snap right: key(alt-ctrl-right)
 # accessibility
 speak this: key(alt-esc)
 tee sleep: speech.disable()
-(aqua|scribe|end): key(cmd-ctrl-alt-shift-f6)
+(aqua|scribe): key(cmd-ctrl-alt-shift-f6)
+[aqua] end: key(f6)
 
 # text formatting
 bold it: key(cmd-b)

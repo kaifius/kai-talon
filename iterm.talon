@@ -18,5 +18,5 @@ binti shell [<user.text>]:
   insert("b k8s-shell -e ")
   user.insert_formatted(user.text, "DASH_SEPARATED")
 
-cloud credentials:
+[binti] cloud credentials:
   insert("b gcloud-credentials")
