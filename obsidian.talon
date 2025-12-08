@@ -71,7 +71,7 @@ partial check to do:
   insert("/ ")
 
 # TODO do a proper integration; this only works on one line, unchecked todos
-strike [through] to do:
+(strike [through] to do|mark won't do):
   # change checkbox to "[-]"
   key(cmd-left)
   key(left)
