@@ -202,6 +202,11 @@ git branch move [<user.text>]:
   insert("git branch -m ")
   user.insert_formatted(user.text, "DASH_SEPARATED")
 
+git branch move kai [<user.text>]:
+  user.vscode("workbench.action.terminal.focus")
+  insert("git branch -m kai/")
+  user.insert_formatted(user.text, "DASH_SEPARATED")
+
 # TODO is there away to pass in 'force' 'kai' as arguments so that these four
 # methods can be collapsed into one?
 git branch delete [<user.text>]:

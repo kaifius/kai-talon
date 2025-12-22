@@ -25,12 +25,13 @@ family PRs: https://github.com/binti-family/family/pulls
 my PRs: https://github.com/pulls/
 PR review: https://github.com/pulls/review-requested
 jira: https://binti.atlassian.net/jira/software/c/projects/ENG/boards/94
-shrine epics: https://binti.atlassian.net/issues/?filter=10380
+shrine epics: https://binti.atlassian.net/jira/software/c/projects/ENG/boards/268
 local host: http://localhost:3000/
 PR canary: http://pr-canary.dev.binti.support/
 graphical: http://localhost:3000/graphiql
 storybook: http://localhost:6006/
 dev: http://dev.binti.support/
+qa: http://qa.binti.support/
 vocal warmup one: https://www.youtube.com/watch?v=0LHsQ0K71Hw
 vocal warmup two: https://youtu.be/VF_9e08PdZU?si=NImLbYJBBPNv4xqZ&t=61
 ChatGPT: https://chatgpt.com/

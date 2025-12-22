@@ -6,3 +6,5 @@ refresh: key(cmd-r)
 binti search [<user.text>]:
   key(ctrl-i)
   insert(user.text)
+
+rango: key(ctrl-shift-space)
